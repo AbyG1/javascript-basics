@@ -8,17 +8,19 @@ const inputTwo = document.getElementById('box2')
 
 let password1 = ''
 let password2 = ''
+let passwordLength = 15;
+
 function randomCharacter() {
     const index = (Math.floor(Math.random() * characters.length))
     return characters[index]
 }
 
 function genartePassword(){
-    for(let i = 0; i < 15; i++){
+    for(let i = 0; i < passwordLength; i++){
         password1 += randomCharacter()
     }
 
-    for(let i = 0; i < 15; i++){
+    for(let i = 0; i < passwordLength; i++){
         password2 += randomCharacter()
     }
     
