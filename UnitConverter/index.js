@@ -26,18 +26,18 @@ buttonEl.addEventListener('click',() => {
 })
 
 function calculatelength(value){
-    footValue = Math.round(value * 3.281 * 1000)/1000
-    meterValue = Math.round(value / 3.281 * 1000)/1000
+    footValue = (value * 3.281).toFixed(3)
+    meterValue = (value / 3.281).toFixed(3)
 }
 
 function calculateVolume(value){
-    literValue = Math.round(value * 0.264 * 1000)/1000
-    gallonValue = Math.round(value / 0.264 * 1000)/1000
+    literValue = (value / 0.264).toFixed(3)
+    gallonValue = (value * 0.264).toFixed(3)
 }
 
 function calculateMass(value){
-    kilogramValue = Math.round(value * 2.204 * 1000)/1000
-    poundValue = Math.round(value /2.204 * 1000)/1000
+    kilogramValue = (value / 2.204).toFixed(3)
+    poundValue = (value * 2.204).toFixed(3)
 }
 
 
