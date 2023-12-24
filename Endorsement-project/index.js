@@ -18,7 +18,7 @@ const endorsementlistInDB = ref(database, "Endorsements")
 const publishBtn = document.getElementById('btn')
 const endorsementContainer = document.getElementById('endorsements')
 const userCommentEl = document.getElementById('comment')
-const endorsementEl = document.createElement('div')
+
 
 
 
@@ -39,7 +39,7 @@ onValue(endorsementlistInDB,(snapshot) =>  {
     if(snapshot.exists()){
         
         let endorsementArray = Object.entries(snapshot.val())
-        endorsementEl.innerHTML = ""
+        endorsementContainer.innerHTML = ""
 
            for(let i = 0; i < endorsementArray.length; i++){
                 let currentItem = endorsementArray[i]
@@ -61,6 +61,8 @@ onValue(endorsementlistInDB,(snapshot) =>  {
 
 function displayEndorsement(value){
 
+
+    const endorsementEl = document.createElement('div')
     const para = document.createElement('p')
 
     
